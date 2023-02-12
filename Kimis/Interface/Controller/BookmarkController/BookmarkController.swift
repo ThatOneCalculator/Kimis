@@ -11,7 +11,7 @@ import UIKit
 class BookmarkController: ViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
-        title = "Bookmark"
+        title = "Bookmarks"
     }
 
     @available(*, unavailable)

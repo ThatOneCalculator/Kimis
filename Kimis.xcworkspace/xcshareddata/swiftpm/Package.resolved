@@ -24,7 +24,7 @@
       "location" : "https://github.com/Wevah/IDNA-Cocoa.git",
       "state" : {
         "branch" : "master",
-        "revision" : "f41c84c2f97c6de137aa36f450defdefd229360e"
+        "revision" : "ab579b71a87a2546cda9e21aa89749606da2ff4c"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage",
       "state" : {
-        "revision" : "6c6b951845a520fa7e8356e28adb5339c0f008d3",
-        "version" : "5.15.0"
+        "revision" : "7ccdcb02fb0ab47409a6602769cea0486be2a209",
+        "version" : "5.15.2"
       }
     },
     {

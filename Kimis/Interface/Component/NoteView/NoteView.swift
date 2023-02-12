@@ -137,11 +137,11 @@ class NoteView: UIView {
         footerText.attributedText = snapshot.footerText
         operations.noteId = snapshot.note.noteId
 
-        if snapshot.note.replyId != nil {
-            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.left.circle.fill")
+        if snapshot.note.renoteId != nil {
+            tintIcon.image = UIImage(systemName: "repeat")
             tintIcon.isHidden = false
-        } else if snapshot.note.renoteId != nil {
-            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.right.circle.fill")
+        } else if snapshot.note.replyId != nil {
+            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.left.fill")
             tintIcon.isHidden = false
         } else {
             tintIcon.isHidden = true

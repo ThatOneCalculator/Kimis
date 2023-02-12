@@ -76,7 +76,7 @@ extension TextParser {
                     ]
                 ),
                 profile.isFollowed ? NSMutableAttributedString(
-                    string: "『 Follows You 』".noLineBreak(),
+                    string: "Follows You".noLineBreak(),
                     attributes: [
                         .foregroundColor: color.secondary,
                         .font: getFont(size: size.base, weight: weight.base),
@@ -106,7 +106,7 @@ extension TextParser {
         while desc.contains("\n\n") {
             desc = desc.replacingOccurrences(of: "\n\n", with: "\n")
         }
-        if desc.isEmpty { desc = "This user did not provide a self introduction." }
+        if desc.isEmpty { desc = "This person doesn't have a bio." }
         let items: [NSMutableAttributedString] = [
             NSMutableAttributedString(string: "\(desc)"),
         ]
@@ -140,11 +140,11 @@ extension TextParser {
         // captions
         var captions = [NSMutableAttributedString]()
         captions += [
-            NSMutableAttributedString(string: "First Seen: \(compile(date: profile.createdAt))"),
+            NSMutableAttributedString(string: "Joined on: \(compile(date: profile.createdAt))"),
         ]
         if let birth = profile.birthday {
             captions += [
-                NSMutableAttributedString(string: "Born: \(birth)"),
+                NSMutableAttributedString(string: "Birthday: \(birth)"),
             ]
         }
         if let location = profile.location {
@@ -170,7 +170,7 @@ extension TextParser {
 
     func compilePreviewReasonForRenote(withUser user: User) -> NSMutableAttributedString {
         let strings: [NSMutableAttributedString] = [
-            NSMutableAttributedString(string: "Renote By"),
+            NSMutableAttributedString(string: "Boosted by"),
             NSMutableAttributedString(string: user.name),
         ]
         let ans = connect(strings: strings, separator: " ")

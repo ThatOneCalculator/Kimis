@@ -54,8 +54,8 @@ extension UserViewController {
         let segmentStack = UIStackView()
         let separator = UIView()
 
-        let segmentNoteButton = SegmentButton(title: "Note")
-        let segmentRepliesButton = SegmentButton(title: "w/ Replies")
+        let segmentNoteButton = SegmentButton(title: "Posts")
+        let segmentRepliesButton = SegmentButton(title: "Replies")
         let segmentMediaButton = SegmentButton(title: "Media")
 
         let progressView = UIActivityIndicatorView()

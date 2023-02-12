@@ -161,11 +161,11 @@ class NotePreview: UIView {
 
         pinnedIcon.isHidden = !pinned
 
-        if snapshot.note.replyId != nil {
-            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.left.circle.fill")
+        if snapshot.note.renoteId != nil {
+            tintIcon.image = UIImage(systemName: "repeat")
             tintIcon.isHidden = false
-        } else if snapshot.note.renoteId != nil {
-            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.right.circle.fill")
+        } else if snapshot.note.replyId != nil {
+            tintIcon.image = UIImage(systemName: "arrowshape.turn.up.left.fill")
             tintIcon.isHidden = false
         } else {
             tintIcon.isHidden = true
@@ -306,7 +306,7 @@ extension NotePreview.Snapshot {
 
         if !context.disableRenoteOptomization, let renote = note.renoteId, note.justRenote {
             previewReasonText = textParser.compilePreviewReasonForRenote(withUser: user)
-            previewReasonIcon = .fluent(.arrow_reply_filled)
+            previewReasonIcon = UIImage(systemName: "repeat")
 
             note = context.source?.notes.retain(renote) ?? .missingDataHolder
             user = context.source?.users.retain(note.userId) ?? User()

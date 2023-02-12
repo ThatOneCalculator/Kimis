@@ -262,7 +262,7 @@ extension UserViewController.ProfileView.ProfileButton {
             [
                 UserMenuAction(
                     title: { _, profile in
-                        "Notes \(profile.notesCount)"
+                        "Posts \(profile.notesCount)"
                     }, image: "number", action: { _, profile, _ in
                         presentMessage("You have \(profile.notesCount) notes")
                     }, qualification: { _, _ in true }
@@ -277,7 +277,7 @@ extension UserViewController.ProfileView.ProfileButton {
                 ),
                 UserMenuAction(
                     title: { _, profile in
-                        "Followed By \(profile.followersCount)"
+                        "Followed by \(profile.followersCount)"
                     }, image: "person", action: { _, profile, anchor in
                         let controller = FollowerController(userId: profile.userId)
                         anchor.parentViewController?.present(next: controller)

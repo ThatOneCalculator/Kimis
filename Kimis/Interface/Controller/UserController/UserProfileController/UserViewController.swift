@@ -34,7 +34,7 @@ class UserViewController: ViewController, RouterDatable {
         didSet { if oldValue != userProfile {
             userView.profile = userProfile
             if let name = userProfile?.name {
-                title = "😶 \(TextParser().trimToPlainText(from: name))"
+                title = "\(TextParser().trimToPlainText(from: name))"
             } else {
                 title = "😶"
             }

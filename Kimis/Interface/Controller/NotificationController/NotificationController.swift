@@ -16,7 +16,7 @@ class NotificationController: ViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        title = "Notification"
+        title = "Notifications"
     }
 
     @available(*, unavailable)

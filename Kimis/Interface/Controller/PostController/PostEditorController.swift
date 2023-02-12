@@ -14,7 +14,7 @@ private let stubContext = NoteCell.Context(kind: .main)
 
 class PostEditorController: ViewController, UIScrollViewDelegate, UIDropInteractionDelegate {
     var _title: String {
-        if renoteId != nil { return "Renote" }
+        if renoteId != nil { return "Boost" }
         if replyId != nil { return "Reply" }
         return "Post"
     }
@@ -103,18 +103,18 @@ class PostEditorController: ViewController, UIScrollViewDelegate, UIDropInteract
 
         avatarHint.tintColor = .accent
         avatarHint.contentMode = .scaleAspectFit
-        avatarHintBackground.backgroundColor = .white
+        avatarHintBackground.backgroundColor = .platformBackground
         if replyId != nil {
-            avatarHint.image = UIImage(systemName: "arrowshape.turn.up.left.circle.fill")
+            avatarHint.image = UIImage(systemName: "arrowshape.turn.up.left.fill")
         } else if renoteId != nil {
-            avatarHint.image = UIImage(systemName: "arrowshape.turn.up.right.circle.fill")
+            avatarHint.image = UIImage(systemName: "repeat")
         } else {
             avatarHint.isHidden = true
             avatarHintBackground.isHidden = true
         }
 
         if renoteId != nil {
-            editor.placeholderText = "Renote"
+            editor.placeholderText = "Boost"
         }
         if let replyId, let initialNote = source?.notes.retain(replyId) {
             defer { toolbar.updateIcons() }

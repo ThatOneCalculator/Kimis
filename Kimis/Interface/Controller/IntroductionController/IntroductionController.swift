@@ -139,7 +139,7 @@ private class WelcomeController: WelcomeStackController {
         view.backgroundColor = .clear
         view.textContainerInset = .zero
         view.isEditable = false
-        view.text = "Welcome to Misskey"
+        view.text = "Welcome to Calckey"
         view.textColor = .systemBlackAndWhite
         view.font = .systemFont(ofSize: 24, weight: .semibold)
         view.textAlignment = .center
@@ -154,7 +154,7 @@ private class WelcomeController: WelcomeStackController {
         view.backgroundColor = .clear
         view.textContainerInset = .zero
         view.isEditable = false
-        view.text = "Misskey is an open source, decentralized social media platform."
+        view.text = "Calckey is an open source, decentralized social media platform."
         view.font = .systemFont(ofSize: 16, weight: .regular)
         view.textColor = .systemBlackAndWhite.withAlphaComponent(0.75)
         view.textAlignment = .center

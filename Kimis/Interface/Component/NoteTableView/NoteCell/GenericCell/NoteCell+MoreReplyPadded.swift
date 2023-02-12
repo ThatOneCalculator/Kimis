@@ -27,7 +27,7 @@ extension NoteCell {
             container.addSubview(connectorPass)
             container.addSubview(label)
 
-            label.text = "Expend Collapsed Replies"
+            label.text = "More Replies"
             label.font = .systemFont(ofSize: CGFloat(AppConfig.current.defaultNoteFontSize), weight: .regular)
             label.textColor = .accent
             label.textAlignment = .left

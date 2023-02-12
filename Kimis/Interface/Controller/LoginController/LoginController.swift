@@ -48,9 +48,9 @@ private class RealLoginController: ViewController, UITextFieldDelegate {
         ret.autocorrectionType = .no
         ret.textContentType = .URL
         #if DEBUG
-            ret.text = "social.qaq.wiki"
+            ret.text = "calckey.social"
         #endif
-        ret.placeholder = "[Host] eg: misskey.io (not username)"
+        ret.placeholder = "[Host] ex: calckey.social (not username)"
         ret.textColor = .accent
         ret.returnKeyType = .done
         ret.layer.cornerRadius = 8
@@ -60,7 +60,7 @@ private class RealLoginController: ViewController, UITextFieldDelegate {
 
     let labelLoginHint: UILabel = {
         let ret = UILabel()
-        ret.text = "Host Address"
+        ret.text = "What's your instance?"
         ret.textColor = .gray
         ret.font = .systemFont(ofSize: 16, weight: .semibold)
         ret.textAlignment = .left
@@ -69,7 +69,7 @@ private class RealLoginController: ViewController, UITextFieldDelegate {
 
     let labelHTTPSNotice: UILabel = {
         let ret = UILabel()
-        ret.text = "[https] is required and used for security reason"
+        ret.text = "Put in the domain of your Calckey or Misskey instance."
         ret.textColor = .gray
         ret.font = .systemFont(ofSize: 12, weight: .regular)
         ret.textAlignment = .center
@@ -78,7 +78,7 @@ private class RealLoginController: ViewController, UITextFieldDelegate {
 
     let buttonLearnMore: UIButton = {
         let ret = UIButton()
-        ret.setTitle("Get One", for: .normal)
+        ret.setTitle("Join an instance", for: .normal)
         ret.setTitleColor(.accent, for: .normal)
         ret.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
         return ret
@@ -102,7 +102,7 @@ private class RealLoginController: ViewController, UITextFieldDelegate {
 
     let buttonAcknowledge: UIButton = {
         let ret = UIButton()
-        ret.setTitle("Made with love by @Lakr233", for: .normal)
+        ret.setTitle("Made with love by ThatOneCalculator", for: .normal)
         ret.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
         ret.setTitleColor(.systemGray3, for: .normal)
         return ret

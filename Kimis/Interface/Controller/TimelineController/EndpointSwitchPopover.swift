@@ -29,7 +29,7 @@ class EndpointSwitchPopover: ViewController, UIPopoverPresentationControllerDele
         view.addSubview(contentView)
     }
 
-    let titleLabel = UILabel(text: "👉\nSwitch Endpoint")
+    let titleLabel = UILabel(text: "Timeline")
     let stackView = UIStackView()
 
     let inset = UIEdgeInsets(inset: 14)
@@ -188,11 +188,11 @@ extension EndpointSwitchPopover {
 private extension TimelineSource.Endpoint {
     var representedIcon: UIImage {
         switch self {
-        case .home: return .fluent(.home_filled)
-        case .local: return .fluent(.people_filled)
-        case .recommended: return .fluent(.shield_globe_filled)
-        case .hybrid: return .fluent(.handshake_filled)
-        case .global: return .fluent(.globe_filled)
+        case .home: return UIImage(systemName: "house.circle.fill")!
+        case .local: return UIImage(systemName: "person.2.circle.fill")!
+        case .recommended: return UIImage(systemName: "hand.thumbsup.circle.fill")!
+        case .hybrid: return UIImage(systemName: "wind.circle.fill")!
+        case .global: return UIImage(systemName: "globe.americas.fill")!
         }
     }
 
@@ -210,7 +210,7 @@ private extension TimelineSource.Endpoint {
         switch self {
         case .home: return "People you follow"
         case .local: return "People from your instance"
-        case .recommended: return: "People from recommended instances"
+        case .recommended: return "People from recommended instances"
         case .hybrid: return "People on your instance and who you follow"
         case .global: return "People across the Fediverse"
         }

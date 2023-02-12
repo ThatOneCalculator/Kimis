@@ -18,19 +18,19 @@ private struct Thanks {
 
 private let thanks: [Thanks] = [
     .init(
-        name: "@Lakr233 @twitter.com",
-        url: URL(string: "https://twitter.com/Lakr233")
+        name: "ThatOneCalculator",
+        url: URL(string: "https://t1c.dev")
     ),
     .init(
-        name: "@Lakr233 @github.com",
+        name: "Lakr233",
         url: URL(string: "https://github.com/Lakr233")
     ),
     .init(
-        name: "@unixzii @twitter.com",
+        name: "unixzii",
         url: URL(string: "https://twitter.com/unixzii")
     ),
     .init(
-        name: "@NekoyueW @twitter.com",
+        name: "NekoyueW",
         url: URL(string: "https://twitter.com/NekoyueW")
     ),
 ]
@@ -44,7 +44,7 @@ class SettingController: ViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        title = "Setting"
+        title = "Settings"
     }
 
     @available(*, unavailable)

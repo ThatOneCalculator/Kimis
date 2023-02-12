@@ -29,7 +29,7 @@ extension TextParser {
         if options.compactPreview {
             enumeratedModifyingWithRegex(withinString: ans, matching: .repliesMentionPrefix) { string in
                 if string.length < 30 { return string }
-                return NSMutableAttributedString(string: "`[@...]` ", attributes: [
+                return NSMutableAttributedString(string: "@... ", attributes: [
                     .foregroundColor: UIColor.accent,
                 ])
             }

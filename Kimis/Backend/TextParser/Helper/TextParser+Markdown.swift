@@ -16,6 +16,8 @@ extension TextParser {
         replaceAttributeForMarkdownMonospaceMultiline(with: string)
         replaceAttributeForMarkdownMonospaceInline(with: string)
         replaceAttributeForMarkdownQuote(with: string)
+        replaceAttributeForCenter(with: string)
+        replaceAttributeForSmall(with: string)
     }
 
     func replaceAttributeForMarkdownLink(with string: NSMutableAttributedString) {
@@ -136,6 +138,32 @@ extension TextParser {
             }
 
             return connect(strings: [leadingQuote, string, trailingQuote], separator: nil)
+        }
+    }
+    
+    func replaceAttributeForCenter(with string: NSMutableAttributedString) {
+        enumeratedModifyingWithRegex(withinString: string, matching: .markdownStrikethrough) { string in
+            string.addAttributes([
+                .paragraphStyle: (NSTextAlignment.center),
+            ], range: string.full)
+            if string.string.hasPrefix("<center>"), string.string.hasSuffix("</center>") {
+                string.deleteCharacters(in: NSRange(location: 0, length: 8))
+                string.deleteCharacters(in: NSRange(location: string.length - 9, length: 9))
+            }
+            return string
+        }
+    }
+    
+    func replaceAttributeForSmall(with string: NSMutableAttributedString) {
+        enumeratedModifyingWithRegex(withinString: string, matching: .markdownStrikethrough) { string in
+            string.addAttributes([
+                .font: UIFont.systemFont(ofSize: 0.6)
+            ], range: string.full)
+            if string.string.hasPrefix("<small>"), string.string.hasSuffix("</small>") {
+                string.deleteCharacters(in: NSRange(location: 0, length: 7))
+                string.deleteCharacters(in: NSRange(location: string.length - 8, length: 8))
+            }
+            return string
         }
     }
 }
